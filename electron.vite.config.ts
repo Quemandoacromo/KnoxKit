@@ -41,8 +41,8 @@ export default defineConfig(({ mode }) => {
 				rollupOptions: {
 					output: {
 						manualChunks: {
-							"vendor-react": ["react", "react-dom"],
-							"vendor-ui-radix": [
+							"react-vendor": ["react", "react-dom", "wouter"],
+							"radix-ui": [
 								"@radix-ui/react-alert-dialog",
 								"@radix-ui/react-collapsible",
 								"@radix-ui/react-dialog",
@@ -59,27 +59,9 @@ export default defineConfig(({ mode }) => {
 								"@radix-ui/react-toast",
 								"@radix-ui/react-tooltip"
 							],
-							"vendor-styling": [
-								"class-variance-authority",
-								"tailwind-merge",
-								"tailwindcss-animate",
-								"@heroicons/react",
-								"@fontsource-variable/inter",
-								"@fontsource-variable/outfit"
-							],
-							"vendor-routing": ["wouter"],
-							"vendor-state": ["nanostores", "@nanostores/react"],
-							"vendor-utils": ["date-fns", "uuid", "fuse.js", "axios", "ini"],
-							"vendor-electron": ["electron-conf", "electron-updater", "electron-winston"],
-							pages: [
-								"./src/renderer/src/pages/instances.tsx",
-								"./src/renderer/src/pages/downloads.tsx",
-								"./src/renderer/src/pages/setup.tsx",
-								"./src/renderer/src/pages/workshop.tsx"
-							]
+							utils: ["date-fns", "uuid", "fuse.js", "class-variance-authority", "tailwind-merge"]
 						}
-					},
-					external: ["extract-zip", "yauzl", "get-stream", "fd-slicer"]
+					}
 				}
 			},
 			resolve: {

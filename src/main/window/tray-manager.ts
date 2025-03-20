@@ -1,5 +1,5 @@
 import { Menu, Tray, app } from "electron"
-import icon from "../../../resources/icon.png?asset"
+import icon from "../../../resources/icons/32x32.png?asset"
 import { getMainWindow } from "./main-window"
 
 let trayInstance: Tray | null = null

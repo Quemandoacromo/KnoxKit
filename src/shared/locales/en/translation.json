@@ -346,6 +346,14 @@
 		"subTitle": "Project Zomboid Manager",
 		"downloads": "Downloads",
 		"active": "active",
+		"recentInstances": "Recent Instances",
+		"noRecentInstances": "No recent instances found",
+		"createInstance": "Create Instance",
+		"unknown": "Unknown",
+		"utilities": "Utilities",
+		"activeDownloads": "Active Downloads",
+		"activeDownloadsCount": "{{count}} active downloads",
+		"manageDownloads": "Manage downloads and mods",
 		"statusBar": {
 			"ready": "Ready",
 			"steamCmd": {

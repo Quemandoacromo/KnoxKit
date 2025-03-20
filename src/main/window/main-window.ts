@@ -7,7 +7,7 @@ import {
 	saveWindowBounds
 } from "@main/stores/window-store"
 import { BrowserWindow, shell } from "electron"
-import icon from "../../../resources/icon.png?asset"
+import icon from "../../../resources/icons/32x32.png?asset"
 
 let mainWindow: BrowserWindow | null = null
 
@@ -23,13 +23,13 @@ export function createMainWindow(): BrowserWindow {
 		height,
 		x: x || undefined,
 		y: y || undefined,
-		minWidth: 900,
-		minHeight: 600,
+		minWidth: 1024,
+		minHeight: 540,
 		show: false,
 		title: "KnoxKit - Project Zomboid Mod Manager",
-		frame: true,
-		titleBarStyle: "hidden",
-		trafficLightPosition: { x: 10, y: 10 },
+		frame: false,
+		titleBarStyle: process.platform === "linux" ? "default" : "hidden",
+		trafficLightPosition: { x: 16, y: 16 },
 		backgroundColor: "#1a1b23",
 		icon,
 		webPreferences: {

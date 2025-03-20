@@ -432,6 +432,14 @@
 		"subTitle": "Gestor de Project Zomboid",
 		"downloads": "Descargas",
 		"active": "activa(s)",
+		"recentInstances": "Instancias Recientes",
+		"noRecentInstances": "No se encontraron instancias recientes",
+		"createInstance": "Crear Instancia",
+		"unknown": "Desconocido",
+		"utilities": "Utilidades",
+		"activeDownloads": "Descargas Activas",
+		"activeDownloadsCount": "{{count}} descargas activas",
+		"manageDownloads": "Gestionar descargas y mods",
 		"statusBar": {
 			"ready": "Listo",
 			"steamCmd": {

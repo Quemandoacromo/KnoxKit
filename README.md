@@ -2,7 +2,7 @@
 
 > Outsmart the apocalypse, one instance at a time.
 
-> ⚠️ **Currently Under Development**: First release planned once Steam Workshop collection import functionality is viable.
+> 🚀 **Version 0.1.0 Released**: Basic functionality available. More features coming soon!
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nozzdev)
 
@@ -29,10 +29,6 @@ KnoxKit is a powerful and user-friendly instance manager for Project Zomboid tha
 
 ## 🤝 Contributing
 KnoxKit is in active development. Feel free to submit issues and pull requests.
-
-## 💜 Support
-If you find this project helpful, consider supporting the development:
-- [Buy me a coffee](https://ko-fi.com/nozzdev)
 
 ## 📝 License
 Licensed under Apache 2.0 with Commons Clause and Steam Workshop compliance. See [LICENSE.md](LICENSE.md) for details.

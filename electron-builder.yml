@@ -1,7 +1,7 @@
 appId: com.knoxkit.app
 productName: KnoxKit
 directories:
-  buildResources: build
+  buildResources: resources
   output: dist
 files:
   - "out/**/*"
@@ -16,6 +16,7 @@ asarUnpack:
   - out/main/**/node_modules/**/*.node
 win:
   executableName: knoxkit
+  icon: resources/icon.ico
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -29,6 +30,7 @@ mac:
     - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
     - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
   notarize: false
+  icon: resources/icon.icns
 dmg:
   artifactName: ${name}-${version}.${ext}
 linux:
@@ -38,11 +40,13 @@ linux:
     - deb
   maintainer: electronjs.org
   category: Utility
+  icon: resources/icons
 appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false
 publish:
-  provider: generic
-  url: https://example.com/auto-updates
+  provider: github
+  owner: valentin-marquez
+  repo: KnoxKit
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/

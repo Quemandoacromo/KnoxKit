@@ -1,7 +1,7 @@
 {
 	"name": "knoxkit",
 	"version": "1.0.0",
-	"description": "An Electron application with React and TypeScript",
+	"description": "🧟 Outsmart the apocalypse, one instance at a time.",
 	"main": "./out/main/index.js",
 	"author": "example.com",
 	"homepage": "https://electron-vite.org",
@@ -59,7 +59,6 @@
 		"nanostores": "^0.11.4",
 		"tailwind-merge": "^3.0.2",
 		"tailwindcss": "^4.0.12",
-		"ts-node": "^10.9.2",
 		"uuid": "^11.1.0",
 		"wouter": "^3.6.0"
 	},
