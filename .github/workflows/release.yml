@@ -33,6 +33,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libarchive-tools
+          sudo snap install snapcraft --classic
 
       - name: build-linux
         if: matrix.os == 'ubuntu-latest'
