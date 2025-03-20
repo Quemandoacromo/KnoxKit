@@ -36,6 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
 	const { t } = useTranslation()
 	const [recentInstances, setRecentInstances] = useState<GameInstance[]>([])
 	const [showQuickLaunch, setShowQuickLaunch] = useState(true)
+	const [platform] = useState(window.electron.process.platform)
 
 	useEffect(() => {
 		const checkHeight = () => {
@@ -174,49 +175,51 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
 
 	return (
 		<div className="flex flex-col h-screen overflow-hidden bg-background select-none antialiased">
-			<div className="h-12 flex items-center justify-between border-b bg-card pr-0 pl-4 drag shadow-sm">
-				<div className="flex items-center space-x-2 no-drag">
-					<div className="h-3 w-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors" />
-					<div className="h-3 w-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors" />
-					<div className="h-3 w-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors" />
+			{platform !== "linux" && (
+				<div className="h-12 flex items-center justify-between border-b bg-card pr-0 pl-4 drag shadow-sm">
+					<div className="flex items-center space-x-2 no-drag">
+						<div className="h-3 w-3 rounded-full bg-red-500 hover:bg-red-600 transition-colors" />
+						<div className="h-3 w-3 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors" />
+						<div className="h-3 w-3 rounded-full bg-green-500 hover:bg-green-600 transition-colors" />
+					</div>
+					<span className="text-sm font-semibold select-none">{t("layout.title")}</span>
+					<div className="flex items-center no-drag h-full">
+						<Button
+							variant="ghost"
+							size="icon"
+							className="hover:bg-accent h-full w-12 rounded-none transition-colors"
+							onClick={(e) => {
+								e.preventDefault()
+								minimizeWindow()
+							}}
+						>
+							<Minimize className="h-4 w-4" />
+						</Button>
+						<Button
+							variant="ghost"
+							size="icon"
+							className="hover:bg-accent h-full w-12 rounded-none transition-colors"
+							onClick={(e) => {
+								e.preventDefault()
+								maximizeWindow()
+							}}
+						>
+							{isMaximized ? <Restore className="h-4 w-4" /> : <Maximize className="h-4 w-4" />}
+						</Button>
+						<Button
+							variant="ghost"
+							size="icon"
+							className="hover:bg-destructive hover:text-destructive-foreground h-full w-12 rounded-none transition-colors"
+							onClick={(e) => {
+								e.preventDefault()
+								closeWindow()
+							}}
+						>
+							<Close className="h-4 w-4" />
+						</Button>
+					</div>
 				</div>
-				<span className="text-sm font-semibold select-none">{t("layout.title")}</span>
-				<div className="flex items-center no-drag h-full">
-					<Button
-						variant="ghost"
-						size="icon"
-						className="hover:bg-accent h-full w-12 rounded-none transition-colors"
-						onClick={(e) => {
-							e.preventDefault()
-							minimizeWindow()
-						}}
-					>
-						<Minimize className="h-4 w-4" />
-					</Button>
-					<Button
-						variant="ghost"
-						size="icon"
-						className="hover:bg-accent h-full w-12 rounded-none transition-colors"
-						onClick={(e) => {
-							e.preventDefault()
-							maximizeWindow()
-						}}
-					>
-						{isMaximized ? <Restore className="h-4 w-4" /> : <Maximize className="h-4 w-4" />}
-					</Button>
-					<Button
-						variant="ghost"
-						size="icon"
-						className="hover:bg-destructive hover:text-destructive-foreground h-full w-12 rounded-none transition-colors"
-						onClick={(e) => {
-							e.preventDefault()
-							closeWindow()
-						}}
-					>
-						<Close className="h-4 w-4" />
-					</Button>
-				</div>
-			</div>
+			)}
 
 			<div className="flex flex-1 overflow-hidden">
 				<div className="flex w-72 flex-col bg-card border-r border-border shadow-sm relative">

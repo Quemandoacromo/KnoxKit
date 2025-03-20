@@ -2,6 +2,7 @@ import {
 	ArrowDownTrayIcon,
 	CubeIcon,
 	DocumentTextIcon,
+	ExclamationTriangleIcon,
 	PuzzlePieceIcon
 } from "@heroicons/react/24/outline"
 import { useStore } from "@nanostores/react"
@@ -185,41 +186,58 @@ export function WorkshopPage() {
 
 			case "not_available":
 				return (
-					<Card>
-						<CardHeader>
-							<CardTitle>{t("pages.workshop.steamCmd.not_available.title")}</CardTitle>
-							<CardDescription>
+					<Card className="border-destructive/20 overflow-hidden">
+						<CardHeader className="pb-6 bg-gradient-to-b from-muted/30 to-transparent">
+							<CardTitle className="flex items-center gap-2">
+								<ArrowDownTrayIcon className="h-5 w-5 text-destructive" />
+								{t("pages.workshop.steamCmd.not_available.title")}
+							</CardTitle>
+							<CardDescription className="text-base mt-1">
 								{t("pages.workshop.steamCmd.not_available.description")}
 							</CardDescription>
 						</CardHeader>
-						<CardContent className="space-y-4">
-							<div className="bg-amber-500/10 rounded-md p-4 text-amber-600 dark:text-amber-400">
-								<p>{t("pages.workshop.steamCmd.not_available.info")}</p>
+						<CardContent className="space-y-6 px-6">
+							<div className="bg-destructive/10 rounded-lg p-4 text-destructive dark:text-destructive/90 border border-destructive/20 shadow-sm">
+								<div className="flex gap-3">
+									<div className="shrink-0 mt-0.5">
+										<ExclamationTriangleIcon className="h-5 w-5" />
+									</div>
+									<p className="text-sm">{t("pages.workshop.steamCmd.not_available.info")}</p>
+								</div>
 							</div>
 
-							<div className="flex items-center justify-center py-4">
+							<div className="flex items-center justify-center py-6">
 								<Button
 									size="lg"
 									onClick={handleInstallSteamCmd}
 									disabled={steamCmdState.isInstalling}
-									className="flex gap-2"
+									className="flex gap-3 relative overflow-hidden group px-6 shadow-md hover:shadow-lg transition-all"
 								>
-									{steamCmdState.isInstalling ? (
-										<Spinner />
-									) : (
-										<ArrowDownTrayIcon className="h-5 w-5" />
-									)}
-									{steamCmdState.isInstalling
-										? t("pages.workshop.steamCmd.not_available.installing")
-										: t("pages.workshop.steamCmd.not_available.install")}
+									<span className="relative z-10 flex items-center gap-2">
+										{steamCmdState.isInstalling ? (
+											<Spinner className="text-primary-foreground" />
+										) : (
+											<ArrowDownTrayIcon className="h-5 w-5 transition-transform group-hover:translate-y-1" />
+										)}
+										<span>
+											{steamCmdState.isInstalling
+												? t("pages.workshop.steamCmd.not_available.installing")
+												: t("pages.workshop.steamCmd.not_available.install")}
+										</span>
+									</span>
 								</Button>
 							</div>
 						</CardContent>
-						<CardFooter className="flex justify-between border-t bg-muted/50 px-6 py-3">
+						<CardFooter className="flex justify-between border-t bg-accent/10 px-6 py-4">
 							<span className="text-sm text-muted-foreground">
 								{t("pages.workshop.steamCmd.not_available.footer")}
 							</span>
-							<Button variant="ghost" size="sm" onClick={handleCheckSteamCmd}>
+							<Button
+								variant="outline"
+								size="sm"
+								onClick={handleCheckSteamCmd}
+								className="border-accent hover:border-accent/80"
+							>
 								{t("pages.workshop.steamCmd.not_available.checkAgain")}
 							</Button>
 						</CardFooter>
