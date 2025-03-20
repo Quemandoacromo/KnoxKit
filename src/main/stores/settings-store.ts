@@ -1,7 +1,7 @@
-import { Conf } from "electron-conf"
-import type { AppSettings } from "@shared/types/settings"
-import { getAppDataPath } from "@main/services"
 import path from "node:path"
+import { getAppDataPath } from "@main/services"
+import type { AppSettings } from "@shared/types/settings"
+import { Conf } from "electron-conf"
 
 const appDataPath = getAppDataPath()
 const defaultInstancesDir = path.join(appDataPath, "instances")
@@ -14,7 +14,7 @@ const appStore = new Conf<AppSettings>({
 		notifications: true,
 		autoUpdate: true,
 		minimizeToTray: true,
-		language: "es",
+		language: "en",
 		steamcmdPath: "",
 		lastSyncDate: null,
 		setupComplete: false,

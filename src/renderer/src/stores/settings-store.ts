@@ -7,7 +7,7 @@ const defaultSettings: AppSettings = {
 	gameDirectory: "",
 	notifications: true,
 	autoUpdate: true,
-	language: "es",
+	language: "en",
 	steamcmdPath: "",
 	lastSyncDate: null,
 	setupComplete: false,
