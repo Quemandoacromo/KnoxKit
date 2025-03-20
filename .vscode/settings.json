@@ -1,0 +1,41 @@
+{
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"biome.lspBin": "node_modules/@biomejs/cli-win32-x64/biome.exe",
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"typescript.tsserver.maxTsServerMemory": 8192,
+	"typescript.tsserver.watchOptions": {
+		"watchFile": "useFsEventsOnParentDirectory"
+	},
+	"typescript.disableAutomaticTypeAcquisition": true,
+	"typescript.updateImportsOnFileMove.enabled": "never",
+	"typescript.tsserver.experimental.enableProjectDiagnostics": false,
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/node_modules/**": true,
+		"**/dist/**": true,
+		"**/out/**": true
+	},
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/dist": true,
+		"**/out": true
+	},
+	"editor.formatOnSave": true,
+	"javascript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.biome": "explicit"
+	}
+}

@@ -1,0 +1,632 @@
+{
+	"pages": {
+		"instances": {
+			"title": "Instancias",
+			"description": "Gestiona tus instancias del juego Project Zomboid",
+			"loading": "Cargando instancias...",
+			"toast": {
+				"deleted": {
+					"title": "Instancia eliminada",
+					"description": "\"{{name}}\" ha sido eliminada con éxito."
+				},
+				"deleteError": {
+					"title": "Error al eliminar instancia",
+					"description": "No se pudo eliminar \"{{name}}\""
+				},
+				"created": {
+					"title": "Instancia creada",
+					"description": "\"{{name}}\" ha sido creada con éxito."
+				},
+				"collectionQueued": {
+					"title": "Colección en cola",
+					"description": "La colección ha sido puesta en cola para descargar. Verifica la página de Descargas para ver el progreso."
+				},
+				"warning": {
+					"title": "Advertencia",
+					"description": "Instancia creada, pero la descarga de la colección no pudo ser puesta en cola."
+				},
+				"createError": {
+					"title": "Error al crear instancia",
+					"description": "No se pudo crear una nueva instancia"
+				},
+				"duplicated": {
+					"title": "Instancia duplicada",
+					"description": "Se ha creado una copia de \"{{name}}\"."
+				},
+				"duplicateError": {
+					"title": "Error al duplicar instancia",
+					"description": "No se pudo duplicar \"{{name}}\""
+				}
+			},
+			"filterStatus": {
+				"All": "Todas",
+				"Ready": "Listas",
+				"Updating": "Actualizando",
+				"Error": "Error",
+				"Outdated": "Desactualizadas"
+			}
+		},
+		"setup": {
+			"title": "KnoxKit",
+			"subtitle": "Gestor de Instancias de Project Zomboid",
+			"progress": "Progreso de Configuración",
+			"statusTexts": {
+				"init": "Iniciando configuración...",
+				"detecting": "Detectando instalación de Project Zomboid...",
+				"found": "Project Zomboid encontrado en: {{path}}",
+				"notFound": "No se pudo encontrar Project Zomboid automáticamente",
+				"verifying": "Verificando la ruta seleccionada: {{path}}",
+				"validPath": "Instalación válida de Project Zomboid encontrada en: {{path}}",
+				"invalidPath": "La ruta seleccionada no contiene una instalación válida de Project Zomboid",
+				"selectError": "Error al seleccionar directorio",
+				"saving": "Guardando configuración...",
+				"complete": "¡Configuración completada!",
+				"failed": "La configuración falló. No se pudieron guardar los ajustes.",
+				"existing": "Usando instalación existente de Project Zomboid: {{path}}"
+			},
+			"detection": {
+				"waiting": "Por favor espera mientras detectamos tu instalación de Project Zomboid...",
+				"success": "¡Project Zomboid detectado!",
+				"manual": "Se requiere selección manual",
+				"manualDesc": "Por favor selecciona el directorio de instalación de Project Zomboid"
+			},
+			"pathInput": {
+				"label": "Ruta de Instalación de Project Zomboid",
+				"placeholder": "/ruta/a/ProjectZomboid",
+				"browse": "Examinar",
+				"valid": "✓ Instalación válida de Project Zomboid",
+				"invalid": "✗ Ruta inválida o no se encontró instalación de Project Zomboid",
+				"verify": "Verificar Ruta"
+			},
+			"toast": {
+				"detected": {
+					"title": "¡Juego detectado!",
+					"description": "Project Zomboid encontrado en: {{path}}"
+				},
+				"failedDetection": {
+					"title": "Detección fallida",
+					"description": "Por favor especifica manualmente la instalación de Project Zomboid"
+				},
+				"invalidPath": {
+					"title": "Ruta de juego inválida",
+					"description": "Por favor selecciona una instalación válida de Project Zomboid"
+				},
+				"setupComplete": {
+					"title": "¡Configuración completada!",
+					"description": "KnoxKit está listo para usar"
+				},
+				"setupFailed": {
+					"title": "Error de configuración",
+					"description": "No se pudieron guardar los ajustes"
+				}
+			},
+			"buttons": {
+				"retry": "Reintentar Detección",
+				"exit": "Salir",
+				"complete": "Completar Configuración"
+			}
+		},
+		"settings": {
+			"title": "Configuración",
+			"description": "Configura tus preferencias de KnoxKit",
+			"tabs": {
+				"general": "General",
+				"paths": "Rutas de Archivos",
+				"advanced": "Avanzado"
+			},
+			"general": {
+				"title": "Configuración de la Aplicación",
+				"description": "Configura el comportamiento general de la aplicación",
+				"autoUpdates": {
+					"label": "Actualizaciones Automáticas",
+					"description": "Buscar actualizaciones automáticamente"
+				},
+				"notifications": {
+					"label": "Notificaciones",
+					"description": "Mostrar notificaciones de escritorio"
+				},
+				"minimizeToTray": {
+					"label": "Minimizar al Iniciar",
+					"description": "Minimizar a la bandeja del sistema al iniciar juegos"
+				},
+				"theme": {
+					"label": "Tema",
+					"light": "Claro",
+					"dark": "Oscuro",
+					"system": "Sistema"
+				},
+				"language": {
+					"label": "Idioma",
+					"description": "Selecciona tu idioma preferido"
+				}
+			},
+			"paths": {
+				"gameDirectory": {
+					"title": "Directorio del Juego",
+					"description": "Establece tu carpeta de instalación de Project Zomboid",
+					"browse": "Examinar...",
+					"save": "Guardar Cambios"
+				}
+			},
+			"advanced": {
+				"title": "Configuración Avanzada",
+				"description": "Estos ajustes afectan al rendimiento del sistema y al almacenamiento de datos. Cambiar con precaución.",
+				"instancesDirectory": {
+					"label": "Ubicación de Almacenamiento de Instancias",
+					"description": "Especifica dónde KnoxKit almacenará las instancias de juego, mods y archivos relacionados.",
+					"selectDirectory": "Seleccionar Directorio",
+					"revertToDefault": "Volver al Sistema Predeterminado",
+					"currentPath": "Ruta personalizada actual:",
+					"warning": {
+						"important": "Importante:",
+						"description": "Cambiar la ubicación de almacenamiento migrará todas las instancias existentes al nuevo directorio. Este proceso:",
+						"time": "Puede tomar un tiempo considerable para instancias grandes",
+						"space": "Requiere espacio en disco suficiente en la ubicación de destino",
+						"interrupt": "No se puede interrumpir una vez iniciado"
+					}
+				},
+				"footer": {
+					"autoSave": "Los cambios se guardan automáticamente",
+					"applyAll": "Aplicar Todos los Cambios"
+				}
+			}
+		},
+		"workshop": {
+			"title": "Workshop",
+			"checkSteamCmd": "Comprobar Estado de SteamCMD",
+			"steamCmd": {
+				"checking": {
+					"title": "Comprobando Instalación de SteamCMD",
+					"description": "Verificando si SteamCMD ya está instalado en tu sistema..."
+				},
+				"not_available": {
+					"title": "Instalación de SteamCMD Requerida",
+					"description": "SteamCMD es necesario para descargar mods del Workshop de Steam para Project Zomboid",
+					"info": "Para usar las funciones del Workshop, necesitas tener SteamCMD instalado. Esta es una herramienta de línea de comandos proporcionada por Valve que permite descargar contenido de Steam.",
+					"install": "Instalar SteamCMD",
+					"installing": "Instalando...",
+					"footer": "Esto descargará e instalará SteamCMD en tu carpeta de KnoxKit",
+					"checkAgain": "Verificar de Nuevo"
+				},
+				"installing": {
+					"title": "Instalando SteamCMD...",
+					"description": "Por favor espera mientras se instala SteamCMD."
+				},
+				"installSuccess": {
+					"title": "SteamCMD Instalado",
+					"description": "SteamCMD se ha instalado correctamente."
+				},
+				"installFailed": {
+					"title": "Error de Instalación",
+					"description": "No se pudo instalar SteamCMD. Por favor intenta de nuevo."
+				}
+			},
+			"tabs": {
+				"import": "Importar Colección",
+				"singleMod": "Mod Individual"
+			},
+			"import": {
+				"title": "Importar Colección de Steam",
+				"description": "Ingresa una URL o ID de colección de Steam Workshop para importar mods para Project Zomboid",
+				"collectionUrl": "URL o ID de la colección",
+				"placeholder": "https://steamcommunity.com/sharedfiles/filedetails/?id=2684244837",
+				"import": "Importar",
+				"invalidUrl": "URL o ID de colección inválido. Por favor proporciona una URL o ID válido del Workshop de Steam.",
+				"importFailed": "Error al importar colección: {{error}}"
+			},
+			"collection": {
+				"workshopCollection": "Colección del Workshop",
+				"mods": "mods",
+				"collectionId": "ID de Colección:",
+				"clear": "Limpiar",
+				"createInstance": "Crear Instancia con esta Colección",
+				"modsInCollection": "Mods en esta colección",
+				"loading": "Cargando detalles de la colección...",
+				"noDetails": "Esta colección tiene {{count}} mods",
+				"noDetailsDesc": "La información detallada de los mods no está disponible",
+				"size": "Tamaño desconocido",
+				"author": "Autor"
+			},
+			"singleMod": {
+				"title": "Importar Mod Individual",
+				"description": "Descarga e instala mods individuales desde el Workshop de Steam",
+				"instruction": "Haz clic en el botón de abajo para abrir el diálogo de importación de mods y seleccionar una instancia donde instalarlo.",
+				"openImporter": "Abrir Importador de Mods"
+			}
+		},
+		"downloads": {
+			"title": "Descargas",
+			"status": {
+				"paused": "Pausado",
+				"failed": "Fallido",
+				"canceled": "Cancelado",
+				"pending": "Pendiente",
+				"error": "Error"
+			},
+			"units": {
+				"bytesPerSec": "B/s"
+			},
+			"importMod": {
+				"title": "Importar Mod de Project Zomboid",
+				"description": "Agregar un archivo de mod (.pzmod) a una instancia existente",
+				"selectFile": "Seleccionar Archivo de Mod",
+				"selectedFile": "Archivo Seleccionado",
+				"selectInstance": "Seleccionar Instancia Destino",
+				"fileTypes": "Archivos de Mod de Project Zomboid",
+				"import": "Importar Mod",
+				"importing": "Importando...",
+				"noFile": "Ningún archivo seleccionado",
+				"noInstance": "Ninguna instancia seleccionada",
+				"success": {
+					"title": "Mod Importado",
+					"description": "El mod ha sido importado con éxito a la instancia"
+				},
+				"error": {
+					"title": "Fallo en la Importación",
+					"description": "No se pudo importar el mod: {{message}}"
+				},
+				"incompatible": {
+					"title": "Mod Incompatible",
+					"description": "Este mod no es compatible con la instancia seleccionada"
+				}
+			},
+			"statusTexts": {
+				"retry": "Reintentar detección",
+				"detecting": "Detectando ruta del juego...",
+				"verifying": "Verificando ruta: {{path}}",
+				"found": "Juego encontrado en: {{path}}",
+				"notFound": "No se pudo encontrar el juego automáticamente",
+				"validPath": "Instalación válida del juego: {{path}}",
+				"invalidPath": "Ruta de juego inválida",
+				"pathEntered": "Ruta introducida, haz clic en Verificar para comprobar",
+				"selectError": "Error al seleccionar directorio",
+				"refreshed": "La lista de descargas ha sido actualizada"
+			},
+			"toast": {
+				"refreshed": {
+					"title": "Descargas Actualizadas",
+					"description": "La lista de descargas ha sido actualizada"
+				},
+				"cleared": {
+					"title": "Descargas Eliminadas",
+					"description": "Se han eliminado {{count}} descargas completadas"
+				}
+			},
+			"buttons": {
+				"clear": "Limpiar",
+				"refresh": "Actualizar"
+			},
+			"tabs": {
+				"active": "Activas",
+				"completed": "Completadas",
+				"all": "Todas"
+			},
+			"stats": {
+				"active": "activas",
+				"completed": "completadas",
+				"failed": "fallidas"
+			},
+			"emptyState": {
+				"noActive": "No hay descargas activas en este momento.",
+				"noCompleted": "No se ha completado ninguna descarga todavía.",
+				"noDownloads": "Tu historial de descargas está vacío."
+			},
+			"downloadInfo": {
+				"speed": "Velocidad",
+				"size": "Tamaño",
+				"mods": "mods"
+			},
+			"collectionMods": {
+				"showMore": "más"
+			}
+		}
+	},
+	"downloads": {
+		"title": "Descargas",
+		"status": {
+			"paused": "Pausado",
+			"failed": "Fallido",
+			"canceled": "Cancelado",
+			"pending": "Pendiente",
+			"error": "Error"
+		},
+		"units": {
+			"bytesPerSec": "B/s"
+		},
+		"importMod": {
+			"title": "Importar Mod de Project Zomboid",
+			"description": "Agregar un archivo de mod (.pzmod) a una instancia existente",
+			"selectFile": "Seleccionar Archivo de Mod",
+			"selectedFile": "Archivo Seleccionado",
+			"selectInstance": "Seleccionar Instancia Destino",
+			"fileTypes": "Archivos de Mod de Project Zomboid",
+			"import": "Importar Mod",
+			"importing": "Importando...",
+			"noFile": "Ningún archivo seleccionado",
+			"noInstance": "Ninguna instancia seleccionada",
+			"success": {
+				"title": "Mod Importado",
+				"description": "El mod ha sido importado con éxito a la instancia"
+			},
+			"error": {
+				"title": "Fallo en la Importación",
+				"description": "No se pudo importar el mod: {{message}}"
+			},
+			"incompatible": {
+				"title": "Mod Incompatible",
+				"description": "Este mod no es compatible con la instancia seleccionada"
+			}
+		},
+		"statusTexts": {
+			"retry": "Reintentar detección",
+			"detecting": "Detectando ruta del juego...",
+			"verifying": "Verificando ruta: {{path}}",
+			"found": "Juego encontrado en: {{path}}",
+			"notFound": "No se pudo encontrar el juego automáticamente",
+			"validPath": "Instalación válida del juego: {{path}}",
+			"invalidPath": "Ruta de juego inválida",
+			"pathEntered": "Ruta introducida, haz clic en Verificar para comprobar",
+			"selectError": "Error al seleccionar directorio",
+			"refreshed": "La lista de descargas ha sido actualizada"
+		},
+		"toast": {
+			"refreshed": {
+				"title": "Descargas Actualizadas",
+				"description": "La lista de descargas ha sido actualizada"
+			},
+			"cleared": {
+				"title": "Descargas Eliminadas",
+				"description": "Se han eliminado {{count}} descargas completadas"
+			}
+		},
+		"buttons": {
+			"clear": "Limpiar",
+			"refresh": "Actualizar"
+		},
+		"tabs": {
+			"active": "Activas",
+			"completed": "Completadas",
+			"all": "Todas"
+		},
+		"stats": {
+			"active": "activas",
+			"completed": "completadas",
+			"failed": "fallidas"
+		},
+		"emptyState": {
+			"noActive": "No hay descargas activas en este momento.",
+			"noCompleted": "No se ha completado ninguna descarga todavía.",
+			"noDownloads": "Tu historial de descargas está vacío."
+		},
+		"downloadInfo": {
+			"speed": "Velocidad",
+			"size": "Tamaño",
+			"mods": "mods"
+		},
+		"collectionMods": {
+			"showMore": "más"
+		}
+	},
+	"navigation": {
+		"items": {
+			"instances": {
+				"name": "Instancias",
+				"description": "Gestionar instancias de juego"
+			},
+			"mods": {
+				"name": "Mods",
+				"description": "Gestionar colecciones de mods"
+			},
+			"workshop": {
+				"name": "Workshop",
+				"description": "Integración con Steam Workshop"
+			},
+			"settings": {
+				"name": "Configuración",
+				"description": "Ajustes de la aplicación"
+			}
+		}
+	},
+	"layout": {
+		"title": "KnoxKit - Gestor de Project Zomboid",
+		"subTitle": "Gestor de Project Zomboid",
+		"downloads": "Descargas",
+		"active": "activa(s)",
+		"statusBar": {
+			"ready": "Listo",
+			"steamCmd": {
+				"checking": "Comprobando SteamCMD...",
+				"notAvailable": "SteamCMD no disponible",
+				"installing": "Instalando SteamCMD...",
+				"ready": "SteamCMD listo"
+			},
+			"downloads": {
+				"inProgress": "descarga en progreso",
+				"inProgressPlural": "descargas en progreso"
+			}
+		}
+	},
+	"instances": {
+		"components": {
+			"launchButton": {
+				"launching": "Iniciando...",
+				"running": "Ejecutándose",
+				"downloading": "Descargando",
+				"updating": "Actualizando",
+				"error": "Error",
+				"play": "Jugar"
+			},
+			"settings": {
+				"title": "Configuración de Instancia",
+				"configureFor": "Configurar ajustes para {{name}}",
+				"tabs": {
+					"general": "General",
+					"advanced": "Avanzado"
+				},
+				"memory": {
+					"allocation": "Asignación de Memoria",
+					"systemRam": "RAM del sistema:",
+					"recommended": "Recomendado:",
+					"warnings": {
+						"high": "Esta asignación de memoria es muy alta para tu sistema y puede causar problemas de rendimiento.",
+						"medium": "Esta asignación de memoria puede afectar al rendimiento del sistema.",
+						"safe": "Esta es una asignación de memoria segura para tu sistema."
+					}
+				},
+				"description": "Descripción",
+				"launchArgs": {
+					"label": "Argumentos de Inicio",
+					"description": "Opciones avanzadas para iniciar el juego (separadas por espacios)"
+				},
+				"buttons": {
+					"cancel": "Cancelar",
+					"save": "Guardar Cambios"
+				},
+				"loading": "Cargando información del sistema..."
+			},
+			"card": {
+				"mod": "mod",
+				"mods": "mods",
+				"installed": "instalados",
+				"including": "Incluyendo",
+				"unnamedMod": "Mod sin nombre",
+				"more": "más",
+				"neverPlayed": "Nunca jugado",
+				"readyToLaunch": "Listo para iniciar",
+				"lastPlayed": "Último jugado",
+				"recently": "Recientemente",
+				"openMenu": "Abrir menú",
+				"noDescription": "Sin descripción",
+				"actions": "Acciones",
+				"settings": "Configuración",
+				"openFolder": "Abrir Carpeta",
+				"delete": "Eliminar"
+			},
+			"emptyState": {
+				"title": "No se encontraron instancias",
+				"filtered": "Intenta ajustar tu búsqueda o filtros para encontrar lo que estás buscando.",
+				"noInstances": "Crea tu primera instancia de Project Zomboid para comenzar con KnoxKit.",
+				"createButton": "Crear Instancia"
+			},
+			"deleteDialog": {
+				"title": "¿Estás seguro?",
+				"description": "Esta acción no se puede deshacer. Se eliminará permanentemente la instancia y todos los archivos asociados.",
+				"cancel": "Cancelar",
+				"confirm": "Eliminar"
+			},
+			"createDialog": {
+				"fromCollection": "Crear Instancia desde Colección",
+				"new": "Crear Nueva Instancia",
+				"fromCollectionDesc": "Crea una nueva instancia con mods de la colección seleccionada",
+				"newDesc": "Configura tu nueva instancia de Project Zomboid",
+				"name": "Nombre de Instancia",
+				"description": "Descripción (Opcional)",
+				"memory": {
+					"allocation": "Asignación de Memoria",
+					"systemRam": "RAM del sistema:",
+					"recommended": "Recomendado:",
+					"highWarning": "Esta asignación de memoria es muy alta para tu sistema.",
+					"mediumWarning": "Esta asignación de memoria puede afectar al rendimiento del sistema."
+				},
+				"collection": {
+					"info": "Colección:",
+					"modsCount": "Se instalarán {{count}} mods"
+				},
+				"buttons": {
+					"cancel": "Cancelar",
+					"create": "Crear Instancia",
+					"creating": "Creando..."
+				},
+				"nameRequired": {
+					"title": "Nombre requerido",
+					"description": "Por favor ingresa un nombre para tu instancia"
+				},
+				"downloadStarted": {
+					"title": "Descarga Iniciada",
+					"description": "Se comenzó a descargar {{count}} mods para tu nueva instancia."
+				},
+				"downloadError": {
+					"title": "Error de Descarga",
+					"description": "No se pudieron comenzar a descargar los mods. Puedes intentarlo de nuevo desde la página de Descargas."
+				},
+				"error": {
+					"title": "Error",
+					"description": "Error al crear la instancia: {{message}}"
+				}
+			},
+			"actionBar": {
+				"search": "Buscar instancias...",
+				"newInstance": "Nueva Instancia",
+				"status": "Estado:",
+				"allStatuses": "Todos los Estados",
+				"sortBy": "Ordenar por:",
+				"sortOptions": {
+					"name": "Nombre",
+					"lastPlayed": "Último jugado",
+					"modCount": "Cantidad de mods",
+					"memoryAllocation": "Uso de memoria"
+				}
+			}
+		}
+	},
+	"mods": {
+		"title": "Mods",
+		"description": "Gestionar mods para tus instancias de Project Zomboid",
+		"selectInstance": "Seleccionar Instancia",
+		"tabs": {
+			"installed": "Instalados",
+			"available": "Disponibles"
+		},
+		"details": "Detalles",
+		"uninstall": "Desinstalar",
+		"noModsTitle": "No hay mods instalados",
+		"noModsDescription": "Esta instancia aún no tiene mods instalados",
+		"browseMods": "Explorar Mods",
+		"availableModsDescription": "Descubre e instala nuevos mods desde el Workshop de Steam",
+		"browseWorkshop": "Explorar Workshop",
+
+		"search": "Buscar mods...",
+		"openWorkshop": "Abrir en Steam Workshop",
+		"confirmUninstall": "Confirmar Desinstalación",
+		"uninstallDescription": "¿Estás seguro de que deseas desinstalar \"{name}\"?",
+		"confirmUninstallButton": "Desinstalar",
+		"enabledToast": "Mod Activado",
+		"disabledToast": "Mod Desactivado",
+		"modEnabled": "El mod ha sido activado",
+		"modDisabled": "El mod ha sido desactivado",
+		"uninstalledToast": "Mod Desinstalado",
+		"modUninstalled": "El mod ha sido desinstalado",
+		"error": "Error",
+		"toggleError": "Error al cambiar el estado del mod",
+		"uninstallError": "Error al desinstalar el mod",
+		"workshopError": "Error al abrir la página del workshop",
+		"noSearchResults": "Ningún mod coincide con tu búsqueda",
+		"tryDifferentSearch": "Prueba con un término diferente o borra la búsqueda",
+		"clearSearch": "Borrar Búsqueda",
+		"cancelButton": "Cancelar"
+	},
+	"modImport": {
+		"title": "Importar Mod del Workshop",
+		"description": "Ingresa una URL o ID de mod del Workshop de Steam para instalarlo en una instancia",
+		"modUrl": "URL o ID del Mod",
+		"fetch": "Obtener Detalles",
+		"by": "por",
+		"clearSelection": "Limpiar Selección",
+		"selectInstance": "Seleccionar Instancia",
+		"selectInstancePlaceholder": "Elige una instancia",
+		"noInstances": "No hay instancias válidas disponibles. Crea una primero.",
+		"cancel": "Cancelar",
+		"importing": "Importando...",
+		"import": "Importar Mod",
+		"errors": {
+			"loadInstancesFailed": "Error al cargar instancias",
+			"invalidUrl": "URL o ID de mod inválido. Por favor proporciona una URL o ID válido del Workshop de Steam.",
+			"missingDetails": "Faltan detalles del mod o selección de instancia",
+			"importFailed": "Error al importar el mod"
+		},
+		"success": {
+			"title": "Mod en Cola",
+			"description": "\"{{name}}\" ha sido puesto en cola para descarga"
+		}
+	}
+}
