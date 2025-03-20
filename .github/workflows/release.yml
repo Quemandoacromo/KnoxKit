@@ -28,6 +28,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Setup Linux build environment
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libarchive-tools
+
       - name: build-linux
         if: matrix.os == 'ubuntu-latest'
         env:
@@ -58,6 +64,9 @@ jobs:
             dist/*.snap
             dist/*.deb
             dist/*.rpm
+            dist/*.tar.gz
+            dist/*.yml
+            dist/*.blockmap
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
