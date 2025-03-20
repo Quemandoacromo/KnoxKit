@@ -9,13 +9,11 @@ permissions:
   contents: write
 
 jobs:
-  release:
+  build:
     runs-on: ${{ matrix.os }}
-
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
@@ -33,7 +31,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libarchive-tools
-          sudo snap install snapcraft --classic
 
       - name: build-linux
         if: matrix.os == 'ubuntu-latest'
@@ -53,7 +50,30 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build:win
 
-      - name: release
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.os }}-artifacts
+          path: dist/*
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+
+      - name: Display structure of downloaded files
+        run: ls -R artifacts/
+
+      - name: Move artifacts for release
+        run: |
+          mkdir dist
+          cp -r artifacts/*/* dist/
+
+      - name: Release
         uses: softprops/action-gh-release@v1
         with:
           draft: true
@@ -62,7 +82,6 @@ jobs:
             dist/*.zip
             dist/*.dmg
             dist/*.AppImage
-            dist/*.snap
             dist/*.deb
             dist/*.rpm
             dist/*.tar.gz
