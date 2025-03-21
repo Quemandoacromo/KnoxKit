@@ -3,8 +3,20 @@
 	"version": "1.0.0",
 	"description": "🧟 Outsmart the apocalypse, one instance at a time.",
 	"main": "./out/main/index.js",
-	"author": "example.com",
-	"homepage": "https://electron-vite.org",
+	"author": {
+		"name": "Valentin Marquez",
+		"email": "me@nozz.dev"
+	},
+	"license": "SEE LICENSE IN LICENSE.md",
+	"copyright": "Copyright © 2025 Valentin Marquez",
+	"homepage": "https://github.com/valentin-marquez/KnoxKit",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/valentin-marquez/KnoxKit.git"
+	},
+	"bugs": {
+		"url": "https://github.com/valentin-marquez/KnoxKit/issues"
+	},
 	"scripts": {
 		"format": "biome format --write .",
 		"lint": "biome lint .",

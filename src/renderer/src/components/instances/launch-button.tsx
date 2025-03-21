@@ -1,4 +1,5 @@
-import { ArrowPathIcon, PlayIcon } from "@heroicons/react/24/outline"
+import { ArrowPathIcon } from "@heroicons/react/24/outline"
+import { PlayCircleIcon } from "@heroicons/react/24/solid"
 import { useStore } from "@nanostores/react"
 import { Button } from "@renderer/components/ui/button"
 import { useTranslation } from "@renderer/hooks/useTranslation"
@@ -49,19 +50,29 @@ export function LaunchButton({
 
 	const showSpinner = isLaunching || status === "Downloading" || status === "Updating"
 
+	// Get the button variant based on status
+	const getButtonVariant = () => {
+		if (status === "Ready") return "default"
+		if (status === "Error") return "destructive"
+		if (status === "Running") return "secondary"
+		return "outline"
+	}
+
 	return (
 		<Button
-			variant={status === "Ready" ? "default" : "secondary"}
-			className={`min-w-24 px-3 ${className}`}
+			variant={getButtonVariant()}
+			className={`min-w-28 px-3 py-1.5 font-medium transition-all duration-300 ${status === "Ready" ? "hover:scale-105" : ""} ${className}`}
 			onClick={handleLaunch}
 			disabled={isDisabled}
 		>
-			{showSpinner ? (
-				<ArrowPathIcon className="mr-2 h-4 w-4 animate-spin" />
-			) : (
-				<PlayIcon className="mr-2 h-4 w-4" />
-			)}
-			<span className="truncate">{buttonText}</span>
+			<div className="flex items-center justify-center space-x-1">
+				{showSpinner ? (
+					<ArrowPathIcon className="h-5 w-5 animate-spin" />
+				) : (
+					<PlayCircleIcon className="h-5 w-5" />
+				)}
+				<span className="truncate">{buttonText}</span>
+			</div>
 		</Button>
 	)
 }

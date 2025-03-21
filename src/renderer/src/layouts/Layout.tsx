@@ -68,7 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
 					const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0
 					return bTime - aTime
 				})
-				.slice(0, 3)
+				.slice(0, 2) // Changed from 3 to 2 to only show the last two instances
 
 			setRecentInstances(instances)
 		}
@@ -337,25 +337,6 @@ export default function Layout({ children }: { children: React.ReactNode }): JSX
 								{t("layout.utilities")}
 							</h3>
 							{renderDownloadButton()}
-
-							{activeDownloadItems.length > 0 && (
-								<div className="mt-2 mx-1 px-3 py-2 rounded-md bg-primary/5 border border-primary/10">
-									<div className="flex items-center justify-between mb-1">
-										<span className="text-xs font-medium text-primary">
-											{t("layout.activeDownloads")}
-										</span>
-										<span className="text-xs text-muted-foreground">
-											{activeDownloadItems.length}
-										</span>
-									</div>
-									<div className="h-1.5 bg-muted rounded-full overflow-hidden">
-										<div
-											className="h-full bg-primary rounded-full animate-pulse"
-											style={{ width: "35%" }}
-										/>
-									</div>
-								</div>
-							)}
 						</div>
 					</div>
 				</div>

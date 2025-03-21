@@ -1,8 +1,26 @@
 # KnoxKit 🧟 - Project Zomboid Instance Manager
 
+<div align="center">
+    <img src="./docs/assets/knoxkit-preview.png" alt="KnoxKit in action" width="800" />
+</div>
+
 > Outsmart the apocalypse, one instance at a time.
 
-> 🚀 **Version 0.1.0 Released**: Basic functionality available. More features coming soon!
+<div align="center">
+        <p>
+                <a href="https://github.com/valeriko777/KnoxKit/releases/tag/v1.0.0">
+                                        <img src="https://img.shields.io/badge/Version-1.0.0-brightgreen" alt="Version 1.0.0">
+                                </a>
+                                <a href="https://github.com/valeriko777/KnoxKit/issues">
+                                        <img src="https://img.shields.io/github/issues/valeriko777/KnoxKit" alt="Issues">
+                                </a>
+                                <a href="https://github.com/valeriko777/KnoxKit/blob/main/LICENSE.md">
+                                        <img src="https://img.shields.io/badge/License-Custom%20Apache%202.0-blue" alt="License">
+                                </a>
+        </p>
+        <h3>🚀 Version 1.0.0 Now Available!</h3>
+        <p>Basic functionality released. More features coming soon!</p>
+</div>
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nozzdev)
 
@@ -10,7 +28,7 @@
 KnoxKit is a powerful and user-friendly instance manager for Project Zomboid that helps you manage multiple game configurations, mod collections, and system resources efficiently.
 
 ## ✨ Key Features
-- **Instance Management**: Create, clone, and manage multiple game instances
+- **Instance Management**: Create, and manage multiple game instances
 - **Steam Workshop Integration**: Seamless mod collection synchronization
 - **Resource Optimization**: Smart resource allocation per instance
 - **Modern UI**: Clean and intuitive interface with dark/light themes
