@@ -1,28 +1,32 @@
 # KnoxKit 🧟 - Project Zomboid Instance Manager
 
 <div align="center">
-    <img src="./docs/assets/knoxkit-preview.png" alt="KnoxKit in action" width="800" />
+        <img src="./docs/assets/knoxkit-preview.png" alt="KnoxKit in action" width="800" />
 </div>
 
 > Outsmart the apocalypse, one instance at a time.
 
 <div align="center">
-        <p>
-                <a href="https://github.com/valeriko777/KnoxKit/releases/tag/v1.0.0">
-                        <img src="https://img.shields.io/badge/Version-1.0.0-brightgreen" alt="Version 1.0.0">
-                </a>
-                <a href="https://github.com/valeriko777/KnoxKit/issues">
-                        <img src="https://img.shields.io/github/issues/valeriko777/KnoxKit" alt="Issues">
-                </a>
-                <a href="https://github.com/valeriko777/KnoxKit/blob/main/LICENSE.md">
-                        <img src="https://img.shields.io/badge/License-Custom%20Apache%202.0-blue" alt="License">
-                </a>
-        </p>
-        <h3>🚀 Version 1.0.0 Now Available!</h3>
-        <p>Basic functionality released. More features coming soon!</p>
+                <p>
+                                <a href="https://github.com/valeriko777/KnoxKit/releases/tag/v1.0.0">
+                                                <img src="https://img.shields.io/badge/Version-1.0.0-brightgreen" alt="Version 1.0.0">
+                                </a>
+                                <a href="https://github.com/valeriko777/KnoxKit/issues">
+                                                <img src="https://img.shields.io/github/issues/valeriko777/KnoxKit" alt="Issues">
+                                </a>
+                                <a href="https://github.com/valeriko777/KnoxKit/blob/main/LICENSE.md">
+                                                <img src="https://img.shields.io/badge/License-Custom%20Apache%202.0-blue" alt="License">
+                                </a>
+                </p>
+                <h3>🚀 Version 1.0.0 Now Available!</h3>
+                <p>Basic functionality released. More features coming soon!</p>
 </div>
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/nozzdev)
+<div align="center">
+                <a href="https://ko-fi.com/nozzdev">
+                                <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi">
+                </a>
+</div>
 
 ## 🎯 Overview
 
@@ -40,6 +44,14 @@ KnoxKit is a powerful and user-friendly instance manager for Project Zomboid tha
 - **Performance Settings**: Options to minimize KnoxKit to system tray when launching games to optimize resources
 - **Multi-language Support**: Choose your preferred language for the application
 - **SteamCMD Integration**: Direct connection to Steam's command-line client for reliable workshop content management
+
+## 🗺️ Roadmap
+
+Check out our development roadmap to see what features and improvements are planned for future releases:
+
+[View KnoxKit Development Roadmap](https://github.com/users/valentin-marquez/projects/6)
+
+While development may not always be my primary focus, the roadmap outlines the direction and priorities for KnoxKit's future.
 
 ## 🛠️ Technical Stack
 
