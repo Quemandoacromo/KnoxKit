@@ -20,10 +20,20 @@
                 </p>
                 <h3>🚀 Version 1.0.0 Now Available!</h3>
                 <p>Basic functionality released. More features coming soon!</p>
+                <a href="https://github.com/valentin-marquez/KnoxKit/releases/latest" style="display: inline-block; background-color: hsl(142.1, 76.2%, 36.3%); color: white; padding: 10px 20px; border-radius: 0.5rem; text-decoration: none; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.2s ease;">
+                    <span style="display: flex; align-items: center; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Latest Release
+                    </span>
+                </a>
 </div>
 
 <div align="center">
-                <a href="https://ko-fi.com/nozzdev">
+                <a href="https://ko-fi.com/nozzdev" style="display: inline-block; margin-top: 20px;">
                                 <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi">
                 </a>
 </div>
