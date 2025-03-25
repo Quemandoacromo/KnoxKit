@@ -31,6 +31,9 @@
 			},
 			"correctness": {
 				"useArrayLiterals": "off"
+			},
+			"a11y": {
+				"useKeyWithClickEvents": "off"
 			}
 		},
 		"ignore": ["**/node_modules", "**/dist", "**/out"]
